@@ -1,9 +1,9 @@
 let express = require('express');
 let router = express.Router();
 const validator = require('express-validator');
-let customer = require('./Controller/CustomerAPI')
+let customer = require('../Controller/CustomerAPI')
 
-let validateUniqueMobileNumber = require('./Validators/UniqueMobileValidator');
+let validateUniqueMobileNumber = require('../Validators/UniqueMobileValidator');
 
 router.post('/customer/create', [validator.body('Email').isEmail().withMessage('Email is not Correct')],
     (req, res) => {

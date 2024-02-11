@@ -7,8 +7,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(bodyParser.json())
 
-let customer=require('./routes')
-app.use('/api',customer);
+let customer = require('./routers/routes')
+app.use('/api', customer);
 
 
 app.listen(4000, () => {
